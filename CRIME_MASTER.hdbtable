@@ -1,0 +1,11 @@
+table.schemaName = "UNIFORM_CRIME_REPORTING_PROJECT";
+table.tableType = COLUMNSTORE;
+table.columns = [
+{name = "CRIME_NAME"; sqlType = NVARCHAR;
+length = 40; },
+{name = "CRIME_ABBR"; sqlType = NVARCHAR;
+length = 40; },
+{name = "TYPE_CRIME"; sqlType = NVARCHAR;
+length = 40; }
+];
+table.primaryKey.pkcolumns = ["CRIME_ABBR"];  

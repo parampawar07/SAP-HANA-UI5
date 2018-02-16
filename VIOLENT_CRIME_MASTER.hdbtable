@@ -1,0 +1,34 @@
+table.schemaName = "UNIFORM_CRIME_REPORTING_PROJECT";
+table.tableType = COLUMNSTORE;
+table.columns = [
+{name = "YEAR"; sqlType = NVARCHAR; length = 4; },
+{name = "POPULATION"; sqlType = NVARCHAR;
+length = 20; },
+{name = " VIOLENT_CRM_TTL "; sqlType = NVARCHAR; length = 20;
+},
+{name = "MURDR_N0NNEGLT_MANSLTR"; sqlType =
+NVARCHAR; length = 20; },
+{name = "LEG_RAPE"; sqlType = NVARCHAR; length =
+20; },
+{name = "RVSD_RAPE"; sqlType = NVARCHAR; length =
+20; },
+{name = "RBRY"; sqlType = NVARCHAR; length = 20; },
+{name = "AGRVTD_ASLT"; sqlType = NVARCHAR; length
+= 20; },
+{name = "VIOLENT_CRM_TTL_RATE"; sqlType = DECIMAL;
+precision = 17; scale = 2; },
+{name = "MURDR_N0NNEGLT_MANSLTR_RATE"; sqlType =
+DECIMAL; precision = 17; scale = 2; },
+{name = "LEG_RAPE_RATE"; sqlType = DECIMAL;
+precision = 17; scale = 2; },
+{name = "RVSD_RAPE_RATE"; sqlType = DECIMAL;
+precision = 17; scale = 2; },
+{name = "RBRY_RATE"; sqlType = DECIMAL; precision
+= 17; scale = 2; },
+{name = "AGRVTD_ASLT_RATE"; sqlType = DECIMAL;
+precision = 17; scale = 2; },
+{name = "STATE_ABBR"; sqlType = NVARCHAR;
+length = 20; },
+{name = "TYPE_CRIME"; sqlType = NVARCHAR;
+length = 40; }
+];

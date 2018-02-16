@@ -1,0 +1,4 @@
+service {
+"UNIFORM_CRIME_REPORTING_PROJECT"."uniform_crime_reporting_project::CRIME_MASTER" as "CRIME_NAME"
+keys generate local "ID";
+} 

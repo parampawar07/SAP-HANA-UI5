@@ -1,0 +1,10 @@
+service {
+"UNIFORM_CRIME_REPORTING_PROJECT"."uniform_crime_reporting_project::CRIME_MASTER" as "CRIME_NAME";
+"UNIFORM_CRIME_REPORTING_PROJECT"."uniform_crime_reporting_project::STATE_MASTER" as "STATE_ABBR";
+
+    "uniform_crime_reporting_project::PROPERTY_CRIME_MASTER" as "Property"
+        keys generate local "ID"
+        aggregates always;
+    
+   
+} 
