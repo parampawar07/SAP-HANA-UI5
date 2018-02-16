@@ -1,0 +1,5 @@
+<mvc:View controllerName="content.Main"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m">
+<DropdownBox id="mybutton" text="Merry" press="changeText"/>
+</mvc:View>

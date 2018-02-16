@@ -1,0 +1,68 @@
+<!DOCTYPE html>  
+<html><head>  
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' > 
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8'" />
+    <title>UCR</title>  
+  
+    <script id='sap-ui-bootstrap' type='text/javascript'  
+        src='/sap/ui5/1/resources/sap-ui-core.js'  
+        data-sap-ui-theme='sap_bluecrystal'  
+        data-sap-ui-libs='sap.ui.commons'></script>   
+  
+<script>  
+    // tells SAPUI5 where to look for resources 
+    var oListBox1 = new sap.ui.commons.ListBox("Cities", {items : [
+			new sap.ui.core.ListItem({id:"City1", text:"Berlin", additionalText:"Germany"}),
+			new sap.ui.core.ListItem({id:"City2", text:"Heidelberg", additionalText:"Germany"}),
+			new sap.ui.core.ListItem({id:"City3", text:"Walldorf", additionalText:"Germany"}),
+			new sap.ui.core.ListItem({id:"City4", text:"London", additionalText:"England"}),
+			new sap.ui.core.ListItem({id:"City5", text:"Dresden", additionalText:"Germany"}),
+			new sap.ui.core.ListItem({id:"City6", text:"New York", additionalText:"USA"}),
+			new sap.ui.core.ListItem({id:"City7", text:"Paris", additionalText:"France"}),
+			new sap.ui.core.ListItem({id:"City8", text:"mumbai", additionalText:"Germany"}),
+			new sap.ui.core.ListItem({id:"City9", text:"delhi", additionalText:"Germany"}),
+			new sap.ui.core.ListItem({id:"City10", text:"halldorf", additionalText:"Germany"}),
+			new sap.ui.core.ListItem({id:"City11", text:"Tondon", additionalText:"England"}),
+			new sap.ui.core.ListItem({id:"City12", text:"Desden", additionalText:"Germany"}),
+			new sap.ui.core.ListItem({id:"City13", text:"New1 York", additionalText:"USA"}),
+			new sap.ui.core.ListItem({id:"City14", text:"Saris", additionalText:"France"})]
+		});
+
+// Create a ComboBox
+var oComboBox2 = new sap.ui.commons.ComboBox("ComboBox2", {tooltip:"City", displaySecondaryValues:true, value:"Walldorf", "association:listBox" : oListBox1});
+
+// Create a Textfield to visualize the CHANGE event
+var oTextField1 = new sap.ui.commons.TextField("TextField1", {tooltip:"Value of Combobox", editable:false, value:oComboBox2.getValue()});
+oComboBox2.attachChange(function(){oTextField1.setValue(oComboBox2.getValue());});
+
+// Attach the ComboBox to the page
+oComboBox2.placeAt("sample2");
+oTextField1.placeAt("sample2");
+   
+    
+    
+    
+   
+    sap.ui.localResources("content");
+// creates an instance of our view
+content_view = sap.ui.view({
+// unique identifier for this instance
+id:"idmain1",
+// location and name of the view
+viewName:"content.Main",
+// type of the view, i.e. XML, JavaScript, JSON...
+type:sap.ui.core.mvc.ViewType.XML
+});
+// places the output of our view on this page
+//content_view.placeAt("content");
+    
+   
+   
+   
+</script>
+
+</head>
+<body class="sapUiBody" role="application">
+    <div id="sample2"></div> 
+</body>
+</html>

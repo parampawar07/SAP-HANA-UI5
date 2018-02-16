@@ -1,0 +1,13 @@
+service {
+"GBI_004"."gbi-student-004::PRODUCT_ATTR_004" as "Products";
+
+"gbi-student-004::SALES_CUBE_CV_004" as "Sales"
+keys generate local "ID"
+aggregates always;
+
+"gbi-student-004::SALES_CUBE_CV_004" as "SalesOrders"
+with ("MONTH", "YEAR", "CITY", "NET_REVENUE", "REVENUE")
+keys generate local "ID"
+aggregates always (SUM of "NET_REVENUE", SUM of "REVENUE");
+
+}

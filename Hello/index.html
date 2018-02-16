@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SAPUI5 in 20 Seconds</title>
+
+    <!-- 1.) Load SAPUI5 (from local server), select theme and control library -->
+    <script id="sap-ui-bootstrap"
+        type="text/javascript"
+        src="/sap/ui5/1/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_blue"
+        data-sap-ui-libs="sap.ui.commons"></script>
+
+
+    <!-- 2.) Create a UI5 button and place it onto the page -->
+    <script>
+        // create the button instance
+        var oButton4 = new sap.ui.commons.Button({
+	text : "Emphasized",
+	style: sap.ui.commons.ButtonStyle.Emph,
+	press : function() {alert('Alert from ' + oButton4.getText());}
+}).placeAt("sample4");
+        
+
+        // an alternative, more jQuery-like notation for the same is:
+        /*
+        $(function(){
+            $("#uiArea").sapui("Button", "btn", {
+                text:"Hello World!", 
+                press:function(){$("#btn").fadeOut();}
+            });
+        });
+        */
+    </script>
+
+</head>
+<body class="sapUiBody">
+
+    <!-- This is where you place the UI5 button -->
+    <div id="uiArea"></div>
+    
+</body>
+</html>

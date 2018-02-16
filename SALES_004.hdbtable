@@ -1,0 +1,20 @@
+table.schemaName = "GBI_004";
+table.tableType = COLUMNSTORE;
+table.columns =
+ [
+    {name = "YEAR"; sqlType = INTEGER;},
+    {name = "MONTH"; sqlType = INTEGER;},
+    {name = "DAY"; sqlType = INTEGER;},
+    {name = "CUSTOMER_NUMBER"; sqlType = NVARCHAR; length = 10;},
+    {name = "ORDER_NUMBER"; sqlType = NVARCHAR; length = 10;},
+    {name = "ORDER_ITEM"; sqlType = NVARCHAR; length = 3;},
+    {name = "PRODUCT"; sqlType = NVARCHAR; length = 8;},
+    {name = "SALES_QUANTITY"; sqlType = INTEGER;},
+    {name = "UNIT_OF_MEASURE"; sqlType = NVARCHAR; length = 3;},
+    {name = "REVENUE"; sqlType = DECIMAL; precision = 17; scale = 2; },
+    {name = "CURRENCY"; sqlType = NVARCHAR; length = 3;},
+    {name = "DISCOUNT"; sqlType = DECIMAL; precision = 17; scale = 2; }   
+    
+ ];
+table.primaryKey.pkcolumns = ["ORDER_NUMBER", "ORDER_ITEM"];
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Test_calc_view" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="2.3" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="Test_calc_view"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="gbi-student-004::test" type="DATA_BASE_TABLE">
+    <viewAttributes allViewAttributes="true"/>
+    <columnObject schemaName="GBI_004" columnObjectName="gbi-student-004::test"/>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="gbi-student-004::test">
+  <attributes>
+    <attribute id="CITY" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CITY"/>
+      <keyMapping schemaName="GBI_004" columnObjectName="gbi-student-004::test" columnName="CITY"/>
+    </attribute>
+    <attribute id="CUSTOMER_NUMBER" key="true" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUSTOMER_NUMBER"/>
+      <keyMapping schemaName="GBI_004" columnObjectName="gbi-student-004::test" columnName="CUSTOMER_NUMBER"/>
+    </attribute>
+    <attribute id="VALID_FROM" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VALID_FROM"/>
+      <keyMapping schemaName="GBI_004" columnObjectName="gbi-student-004::test" columnName="VALID_FROM"/>
+    </attribute>
+    <attribute id="VALID_TO" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VALID_TO"/>
+      <keyMapping schemaName="GBI_004" columnObjectName="gbi-student-004::test" columnName="VALID_TO"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

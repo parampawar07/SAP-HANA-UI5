@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>UI5 App of GBI_004</title>
+<script id="sap-ui-bootstrap"
+type="text/javascript"
+src="/sap/ui5/1/resources/sap-ui-core.js"
+data-sap-ui-theme="sap_bluecrystal"
+data-sap-ui-libs="sap.m, sap.viz"
+data-sap-ui-language="en"
+data-sap-ui-xx-bindingSyntax='complex'></script>
+<script>
+			sap.ui.localResources("content");
+			var app = new sap.m.App({initialPage:"idFileUpload1"});
+			var page = sap.ui.view({id:"idFileUpload1", 
+                                                viewName:"content.FileUpload", 
+                                                type:sap.ui.core.mvc.ViewType.XML});
+			app.addPage(page);
+			app.placeAt("content");
+		</script>
+</head>
+<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
+
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		

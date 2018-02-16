@@ -1,0 +1,15 @@
+table.schemaName = "GBI_004";
+table.tableType = COLUMNSTORE;
+table.columns = 
+[
+        {name = "CUSTOMER_NUMBER"; sqlType = NVARCHAR; length = 10; },
+        {name = "CITY"; sqlType = NVARCHAR; length = 35; },
+        {name = "VALID_FROM"; sqlType = NVARCHAR; },
+        {name = "VALID_TO"; sqlType = NVARCHAR; }
+];
+table.primaryKey.pkcolumns = ["CUSTOMER_NUMBER"];
+
+
+
+
+

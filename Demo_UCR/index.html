@@ -1,0 +1,545 @@
+<!DOCTYPE html>  
+<html><head>  
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' > 
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8'" />
+    <title>UCR</title>  
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  
+    <script id='sap-ui-bootstrap' type='text/javascript'  
+        src='/sap/ui5/1/resources/sap-ui-core.js'  
+        data-sap-ui-theme='sap_bluecrystal'  
+        data-sap-ui-libs='sap.ui.commons'></script>   
+  
+<script>  
+    // tells SAPUI5 where to look for resources 
+    var oComboBox1 = new sap.ui.commons.ComboBox("ComboBox1");
+    oComboBox1.setTooltip("States");
+    oComboBox1.setEditable(true);
+    oComboBox1.setValue("States");
+    oComboBox1.setWidth("150px");
+    
+    var oItem = new sap.ui.core.ListItem("State1");
+    oItem.setText("Alabama (AL)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State2");
+    oItem.setText("Alaska (AK)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State3");
+    oItem.setText("Arizona (AZ)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State4");
+    oItem.setText("Arkansas (AR)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State5");
+    oItem.setText("California (CA)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State6");
+    oItem.setText("Colorado (CO)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State7");
+    oItem.setText("Connecticut (CT)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State8");
+    oItem.setText("Delaware (DE)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State9");
+    oItem.setText("District of Columbia (DC)");
+    oComboBox1.addItem(oItem);
+    
+     var oItem = new sap.ui.core.ListItem("State10");
+    oItem.setText("Florida (FL)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State11");
+    oItem.setText("Georgia (GA)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State12");
+    oItem.setText("Hawaii (HI)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State13");
+    oItem.setText("Ideho (ID)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State14");
+    oItem.setText("Illinois (IL)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State15");
+    oItem.setText("Indiana (IN)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State16");
+    oItem.setText("Iowa (IA)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State17");
+    oItem.setText("Kansas (KS)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State18");
+    oItem.setText("Kentucky (JY)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State19");
+    oItem.setText("Louisiana (LA)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State20");
+    oItem.setText("Maine (ME)");
+    oComboBox1.addItem(oItem);
+    
+   var oItem = new sap.ui.core.ListItem("State21");
+    oItem.setText("Maryland (MD)");
+    oItem.setKey("MD");
+    oComboBox1.addItem(oItem);
+    
+   var oItem = new sap.ui.core.ListItem("State22");
+    oItem.setText("Messachusetts (MA)");
+    oComboBox1.addItem(oItem);
+    
+   var oItem = new sap.ui.core.ListItem("State23");
+    oItem.setText("Michigan (MI)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State24");
+    oItem.setText("Minnesota (MN)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State25");
+    oItem.setText("Mississippi (MS)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State26");
+    oItem.setText("Missouri (MO)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State27");
+    oItem.setText("Montana (MT)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State28");
+    oItem.setText("Nebraska (NE)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State29");
+    oItem.setText("Nevada (NV)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State30");
+    oItem.setText("New Hampshire (NH)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State31");
+    oItem.setText("New Jersey (NJ)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State32");
+    oItem.setText("New Mexico (NM)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State33");
+    oItem.setText("New York (NY)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State34");
+    oItem.setText("North Carolina (NC)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State35");
+    oItem.setText("North Dakota (ND)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State36");
+    oItem.setText("Ohio (OH)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State37");
+    oItem.setText("Oklahoma (OK)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State38");
+    oItem.setText("Oregon (OR)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State39");
+    oItem.setText("Pennsylvania (PA)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State40");
+    oItem.setText("Rhode Island (RI)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State41");
+    oItem.setText("South Carolina (SC)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State42");
+    oItem.setText("South Dakota (SD)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State43");
+    oItem.setText("Tennessee (TN)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State44");
+    oItem.setText("Texas (TX)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State45");
+    oItem.setText("Utah (UT)");
+    oComboBox1.addItem(oItem);
+    var oItem = new sap.ui.core.ListItem("State46");
+    oItem.setText("Vermount (VT)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State47");
+    oItem.setText("Virginia (VA)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State48");
+    oItem.setText("Washington (WA)");
+    oComboBox1.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("State49");
+    oItem.setText("West Virginia (WE)");
+    oComboBox1.addItem(oItem);
+    
+   var oItem = new sap.ui.core.ListItem("State50");
+    oItem.setText("Wisconsin (WI)");
+    oComboBox1.addItem(oItem);
+    
+   var oItem = new sap.ui.core.ListItem("State51");
+    oItem.setText("Wyoming (WY)");
+    oComboBox1.addItem(oItem);
+   
+    
+    
+    
+    oComboBox1.placeAt("content");
+    
+    sap.ui.localResources("content");
+// creates an instance of our view
+content_view = sap.ui.view({
+// unique identifier for this instance
+id:"idmain1",
+// location and name of the view
+viewName:"content.Main",
+// type of the view, i.e. XML, JavaScript, JSON...
+type:sap.ui.core.mvc.ViewType.XML
+});
+// places the output of our view on this page
+//content_view.placeAt("content");
+    
+   
+   
+   
+</script>
+<script>  
+    // tells SAPUI5 where to look for resources 
+    var oComboBox2 = new sap.ui.commons.ComboBox("ComboBox2");
+    oComboBox2.setTooltip("Years");
+    oComboBox2.setEditable(true);
+    oComboBox2.setValue("Year");
+    oComboBox2.setWidth("150px");
+    
+    var oItem = new sap.ui.core.ListItem("Year1");
+    oItem.setText("1964");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year2");
+    oItem.setText("1965");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year3");
+    oItem.setText("1966");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year4");
+    oItem.setText("1967");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year5");
+    oItem.setText("1968");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year6");
+    oItem.setText("1969");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year7");
+    oItem.setText("1970");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year8");
+    oItem.setText("1971");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year9");
+    oItem.setText("1972");
+    oComboBox2.addItem(oItem);
+    
+     var oItem = new sap.ui.core.ListItem("Year10");
+    oItem.setText("1973");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year11");
+    oItem.setText("1974");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year12");
+    oItem.setText("1975");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year13");
+    oItem.setText("1976");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year14");
+    oItem.setText("1977");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year15");
+    oItem.setText("1978");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year16");
+    oItem.setText("1979");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year17");
+    oItem.setText("1980");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year18");
+    oItem.setText("1981");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year19");
+    oItem.setText("1982");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year20");
+    oItem.setText("1983");
+    oComboBox2.addItem(oItem);
+    
+   var oItem = new sap.ui.core.ListItem("Year21");
+    oItem.setText("1984");
+    oItem.setKey("MD");
+    oComboBox2.addItem(oItem);
+    
+   var oItem = new sap.ui.core.ListItem("Year22");
+    oItem.setText("1985");
+    oComboBox2.addItem(oItem);
+    
+   var oItem = new sap.ui.core.ListItem("Year23");
+    oItem.setText("1986");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year24");
+    oItem.setText("1987");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year25");
+    oItem.setText("1988");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year26");
+    oItem.setText("1989");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year27");
+    oItem.setText("1990");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year28");
+    oItem.setText("1991");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year29");
+    oItem.setText("1992");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year30");
+    oItem.setText("1993");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year31");
+    oItem.setText("1994");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year32");
+    oItem.setText("1995");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year33");
+    oItem.setText("1996");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year34");
+    oItem.setText("1997");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year35");
+    oItem.setText("1998");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year36");
+    oItem.setText("1999");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year37");
+    oItem.setText("2000");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year38");
+    oItem.setText("2001");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year39");
+    oItem.setText("2002");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year40");
+    oItem.setText("2003");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year41");
+    oItem.setText("2004");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year42");
+    oItem.setText("2005");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year43");
+    oItem.setText("2006");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year44");
+    oItem.setText("2007");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year45");
+    oItem.setText("2008");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year46");
+    oItem.setText("2009");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year47");
+    oItem.setText("2010");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year48");
+    oItem.setText("2011");
+    oComboBox2.addItem(oItem);
+    
+    var oItem = new sap.ui.core.ListItem("Year49");
+    oItem.setText("2012");
+    oComboBox2.addItem(oItem);
+    
+   var oItem = new sap.ui.core.ListItem("Year50");
+    oItem.setText("2013");
+    oComboBox2.addItem(oItem);
+    
+     
+   var oItem = new sap.ui.core.ListItem("Year51");
+    oItem.setText("2014");
+    oComboBox2.addItem(oItem);
+    
+
+  
+    
+    
+    oComboBox2.placeAt("content");
+    
+    sap.ui.localResources("content");
+// creates an instance of our view
+content_view = sap.ui.view({
+// unique identifier for this instance
+id:"idmain1",
+// location and name of the view
+viewName:"content.Main",
+// type of the view, i.e. XML, JavaScript, JSON...
+type:sap.ui.core.mvc.ViewType.XML
+});
+// places the output of our view on this page
+//content_view.placeAt("content");
+    
+   
+   
+   
+</script>
+<script>  
+    // tells SAPUI5 where to look for resources 
+    var oComboBox3 = new sap.ui.commons.ComboBox("ComboBox3");
+    oComboBox3.setTooltip("Type of Crime");
+    oComboBox3.setEditable(true);
+    oComboBox3.setValue("Crime");
+    oComboBox3.setWidth("150px");
+    
+     var oItem = new sap.ui.core.ListItem("Crime1");
+    oItem.setText("Violent Crime");
+    oComboBox3.addItem(oItem);
+    
+     var oItem = new sap.ui.core.ListItem("Crime2");
+    oItem.setText("Property Related Crime");
+    oComboBox3.addItem(oItem);
+    
+    oComboBox3.placeAt("content");
+    
+    sap.ui.localResources("content");
+// creates an instance of our view
+content_view = sap.ui.view({
+// unique identifier for this instance
+id:"idmain1",
+// location and name of the view
+viewName:"content.Main",
+// type of the view, i.e. XML, JavaScript, JSON...
+type:sap.ui.core.mvc.ViewType.XML
+});
+// places the output of our view on this page
+//content_view.placeAt("content");
+    
+ </script>   
+
+</head>
+<body class="sapUiBody" role="application">
+    <div id="content"></div> 
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat:  36.778259, lng: -119.417931};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+        
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd2vDPfAqYbMqYJtcwBO1cmkmBj4Qmkn0&amp;callback=initMap">
+    </script>
+</body>
+</html>

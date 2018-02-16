@@ -1,0 +1,75 @@
+<mvc:View
+	controllerName="sap.ui.vbm.sample.AnalyticMapCharts.C"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.suite.ui.commons"
+  	xmlns:m="sap.m"
+	xmlns:vbm="sap.ui.vbm"
+   height="100%"
+   displayBlock="true">
+	<vbm:AnalyticMap 
+	    id="vbi"
+	    width="100%"
+	    height="100%"
+	    regionClick="onRegionClick"
+		regionContextMenu="onRegionContextMenu"
+		regions ="{/regionProperties}">
+	    <vbm:regions>
+			<vbm:Region 	        
+			    code="{code}" 
+			    color="{color}"
+			    tooltip = "{tooltip}"/>
+		</vbm:regions>
+		<vbm:Containers>
+		    <vbm:Container
+		        position="00;50;0"
+		        tooltip="Container">
+		        <vbm:item>
+		            <HarveyBallMicroChart size="S" total="100" totalScale="Mrd" showTotal="true" showFractions="true" press="press">
+					    <items>
+					      <HarveyBallMicroChartItem fraction="63.5" color="Good" fractionScale="Mrd" />
+					    </items>
+					</HarveyBallMicroChart>							            
+		        </vbm:item>
+		    </vbm:Container>
+		    <vbm:Container
+		        position="-130;30;0">
+		        <vbm:item>
+		            <HarveyBallMicroChart size="S" total="100" totalScale="Mrd" showTotal="true" showFractions="true" press="press">
+					    <items>
+					      <HarveyBallMicroChartItem fraction="15" color="Error" fractionScale="Mrd" /> 
+					    </items>
+					</HarveyBallMicroChart>							            
+		        </vbm:item>
+		    </vbm:Container>
+		    <vbm:Container
+		        position="100;-30;0">
+		        <vbm:item>
+		            <HarveyBallMicroChart size="S" total="100" totalScale="Mrd" showTotal="false" showFractions="false" colorPalette="#5cbae6" press="press">
+					    <items>
+					      <HarveyBallMicroChartItem fraction="20" fractionScale="Mrd" /> 
+					    </items>
+					 </HarveyBallMicroChart>						            
+		        </vbm:item>
+		    </vbm:Container>
+		    <vbm:Container
+		        position="100;50;0">
+		        <vbm:item>
+		            <NumericContent size="M" value="65.5" scale="MM" valueColor="Error" indicator="Down" state="Loaded"  icon="sap-icon://travel-expense" class="marginTopLeft" press="press"/> 
+				</vbm:item>
+		    </vbm:Container>
+		    <vbm:Container
+		        position="-120;-20;0">
+		        <vbm:item>
+		            <ComparisonChart size="S" scale="M" class="marginTopLeft" press="press">
+				        <data>
+				          <ComparisonData  title="Americas" value="10" color="Good"/>
+				          <ComparisonData  title="EMEA" value="50" color="Good"/>
+				          <ComparisonData  title="APAC" value="-20" color="Error"/>
+				        </data>
+				    </ComparisonChart>		            
+				</vbm:item>
+		    </vbm:Container>
+		</vbm:Containers>
+	</vbm:AnalyticMap>
+</mvc:View>

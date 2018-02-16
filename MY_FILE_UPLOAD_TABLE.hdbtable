@@ -1,0 +1,13 @@
+table.schemaName = "GBI_004";
+table.tableType = COLUMNSTORE;
+table.loggingType = NOLOGGING; 
+table.columns = [
+{name = "CRIME_NAME"; sqlType = NVARCHAR;
+length = 40; nullable = false;},
+{name = "CRIME_ABBR"; sqlType = NVARCHAR;
+length = 40; nullable = false;},
+{name = "TYPE_CRIME"; sqlType = NVARCHAR;
+length = 40; nullable = false; }
+];
+table.primaryKey.pkcolumns = ["CRIME_ABBR"];  
+  

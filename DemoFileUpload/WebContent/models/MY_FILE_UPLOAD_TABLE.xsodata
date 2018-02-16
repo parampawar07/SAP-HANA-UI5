@@ -1,0 +1,4 @@
+service namespace "gbi-student-004"
+{
+"GBI_004"."gbi-student-004::MY_FILE_UPLOAD_TABLE" as "FILE_UPLOAD_TABLE";
+}
